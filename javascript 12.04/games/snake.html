@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Snake game</title>
+  </head>
+  <style>
+    body {
+      background-image: url(https://t3.ftcdn.net/jpg/03/23/88/08/360_F_323880864_TPsH5ropjEBo1ViILJmcFHJqsBzorxUB.jpg);
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      height: 100vh;
+    }
+
+    .playground {
+      background-color: black;
+      width: 400px;
+      height: 400px;
+      position: relative;
+      box-shadow: 0 0 20px 5px rgba(0, 255, 255, 0.8);
+    }
+
+    .body {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 20px;
+      width: 20px;
+      background-color: rgb(140, 215, 28);
+    }
+
+    .food {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background-color: red;
+      top: 100px;
+      left: 200px;
+    }
+
+    .button-container {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .neon-button {
+      background-color: black;
+      border: 2px solid rgba(0, 255, 0, 0.8);
+      color: white;
+      padding: 10px 15px;
+      border-radius: 5px;
+      font-size: 18px;
+      display: flex;
+      align-items: center;
+      margin: 0 5px;
+      cursor: pointer;
+    }
+  </style>
+  <body>
+    <div class="playground">
+      <div class="body" id="snakeHead"></div>
+      <div class="food" id="snakeFood"></div>
+    </div>
+    <div class="button-container">
+      <button onclick="changeDirection('up')" class="neon-button">
+        <i class="fa-solid fa-angle-up" style="color: #fafafa"></i>
+      </button>
+    </div>
+    <div class="button-container">
+      <button onclick="changeDirection('left')" class="neon-button">
+        Left
+      </button>
+      <button onclick="changeDirection('down')" class="neon-button">
+        Down
+      </button>
+      <button onclick="changeDirection('right')" class="neon-button">
+        Right
+      </button>
+    </div>
+
+    <script>
+      let snakePositionLeft = 0;
+      let snakePositionTop = 0;
+      let direction = "right";
+
+      function changeDirection(value) {
+        direction = value;
+      }
+
+      function goRight() {
+        if (snakePositionLeft < 380) {
+          snakePositionLeft += 20;
+        } else {
+          snakePositionLeft = 0;
+        }
+      }
+
+      function goLeft() {
+        if (snakePositionLeft === 0) {
+          snakePositionLeft = 380;
+        } else {
+          snakePositionLeft -= 20;
+        }
+      }
+
+      function goDown() {
+        if (snakePositionTop < 380) {
+          snakePositionTop += 20;
+        } else {
+          snakePositionTop = 0;
+        }
+      }
+
+      function goUp() {
+        if (snakePositionTop === 0) {
+          snakePositionTop = 380;
+        } else {
+          snakePositionTop -= 20;
+        }
+      }
+
+      function getRandomInt(max) {
+        return Math.floor(Math.random() * (max + 1));
+      }
+
+      function generateFood() {
+        const food = document.getElementById("snakeFood");
+
+        let foodPositionTop = getRandomInt(380);
+        let foodPositionLeft = getRandomInt(380);
+
+        food.style.left = foodPositionLeft + "px";
+        food.style.top = foodPositionTop + "px";
+      }
+
+      function gameLoop() {
+        const head = document.getElementById("snakeHead");
+
+        generateFood();
+
+        switch (direction) {
+          case "up":
+            goUp();
+            break;
+          case "down":
+            goDown();
+            break;
+          case "right":
+            goRight();
+            break;
+          case "left":
+            goLeft();
+            break;
+        }
+
+        head.style.left = snakePositionLeft + "px";
+        head.style.top = snakePositionTop + "px";
+      }
+
+      setInterval(gameLoop, 500);
+    </script>
+  </body>
+</html>

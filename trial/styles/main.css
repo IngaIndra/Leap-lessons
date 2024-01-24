@@ -1,0 +1,157 @@
+body {
+    margin: 0;
+}
+
+.header {
+    background-color: #9a7aff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 30px;
+    overflow: scroll;
+}
+.header-logo {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: sans-serif;
+    font-size: 20px;
+    padding: 5px;
+}
+.header-logo:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.header-menu {
+    color: white;
+    font-family: sans-serif;
+    display: flex;
+    gap: 20px;
+}
+.header-menu a {
+    color: white;
+    text-decoration: none;
+}
+.header-menu a:hover {
+    text-decoration: underline;
+}
+
+.book {
+    background-color: #9a7aff;
+    padding-top: 150px;
+    padding-bottom: 150px;
+}
+.book-container {
+    display: flex;
+    width: 1200px;
+
+    /* margin-left: auto;
+    margin-right: auto; */
+
+    margin: 0 auto;
+}
+.book-text {
+    width: 597px;
+}
+.book-image {
+    width: 723px;
+}
+.book-title {
+    color: white;
+    font-size: 49px;
+    font-family: sans-serif;
+}
+
+.book-desc {
+    color: #e5e5e5;
+    font-size: 20px;
+    font-family: sans-serif;
+    line-height: 1.5;
+}
+
+.book-button {
+    background-color: #33c37e;
+    border: 0;
+    color: white;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.pencil {
+    background-color: #33c37e;
+    padding-top: 150px;
+    padding-bottom: 150px;
+}
+.pencil-figure {
+    text-align: center;
+}
+.pencil-image {
+    width: 723px;
+}
+.pencil-title {
+    color: white;
+    text-align: center;
+    font-size: 49px;
+    font-family: sans-serif;
+}
+
+.pencil-desc {
+    width: 723px;
+    color: #e5e5e5;
+    text-align: center;
+    font-size: 20px;
+    font-family: sans-serif;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.pencil-action {
+    text-align: center;
+}
+.pencil-button {
+    background-color: #9a7aff;
+    border: 0;
+    color: white;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.scroll {
+    overflow-x: scroll;
+    padding: 50px;
+}
+
+.scroll-container {
+    display: flex;
+    width: 3000px;
+    gap: 50px;
+}
+.scroll-item {
+    width: 520px;
+    height: 773px;
+    background-color: brown;
+    border: 1px solid #000;
+}
+
+.bottom-container {
+    display: flex;
+}
+
+.bottom-box {
+    width: 200px;
+    height: 100px;
+    border: 1px solid #000;
+    background-color: blue;
+}
+
+.bottom-left {
+    width: 100px;
+    height: 200px;
+    border: 1px solid #000;
+    background-color: green;
+}

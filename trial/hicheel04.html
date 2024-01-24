@@ -1,0 +1,177 @@
+<html>
+    <head>
+        <style>
+            body {
+                margin: 0;
+            }
+
+            .header {
+                background-color: #9a7aff;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 50px 30px;
+            }
+            .header-logo {
+                color: white;
+                font-weight: bold;
+                text-decoration: none;
+                text-transform: uppercase;
+                font-family: sans-serif;
+                font-size: 20px;
+                padding: 5px;
+            }
+            .header-logo:hover {
+                background-color: rgba(0, 0, 0, 0.2);
+            }
+
+            .header-menu {
+                color: white;
+                font-family: sans-serif;
+                display: flex;
+                gap: 20px;
+            }
+            .header-menu a {
+                color: white;
+                text-decoration: none;
+            }
+            .header-menu a:hover {
+                text-decoration: underline;
+            }
+
+            .book {
+                background-color: #9a7aff;
+                padding-top: 150px;
+                padding-bottom: 150px;
+            }
+            .book-container {
+                display: flex;
+                width: 1200px;
+
+                /* margin-left: auto;
+                margin-right: auto; */
+
+                margin: 0 auto;
+            }
+            .book-text {
+                width: 597px;
+            }
+            .book-image {
+                width: 723px;
+            }
+            .book-title {
+                color: white;
+                font-size: 49px;
+                font-family: sans-serif;
+            }
+
+            .book-desc {
+                color: #e5e5e5;
+                font-size: 20px;
+                font-family: sans-serif;
+            }
+
+            .book-button {
+                background-color: #33c37e;
+                border: 0;
+                color: white;
+                padding-top: 15px;
+                padding-bottom: 15px;
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+
+            .pencil {
+                background-color: #33c37e;
+                padding-top: 150px;
+                padding-bottom: 150px;
+            }
+            .pencil-figure {
+                text-align: center;
+            }
+            .pencil-image {
+                width: 723px;
+            }
+            .pencil-title {
+                color: white;
+                text-align: center;
+                font-size: 49px;
+                font-family: sans-serif;
+            }
+
+            .pencil-desc {
+                width: 723px;
+                color: #e5e5e5;
+                text-align: center;
+                font-size: 20px;
+                font-family: sans-serif;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .pencil-action {
+                text-align: center;
+            }
+            .pencil-button {
+                background-color: #9a7aff;
+                border: 0;
+                color: white;
+                padding-top: 15px;
+                padding-bottom: 15px;
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="header">
+            <!-- <a href="https://ikon.mn/" target="_blank">Librook</a> -->
+            <a class="header-logo" href="/">Librook</a>
+
+            <div class="header-menu">
+                <a href="/product.html">Product</a>
+                <a href="/template.html">Template</a>
+                <a href="/blog.html">Blog</a>
+                <a href="/pricing.html">Pricing</a>
+            </div>
+        </div>
+
+        <div class="book">
+            <div class="book-container">
+                <div class="book-text">
+                    <h1 class="book-title">Novelas de amor juvenil</h1>
+
+                    <p class="book-desc">
+                        Un amor de verano, intenso e inesperado; una mudanza que conlleva nuevos amigos, unos más interesantes que otros; una librería que te cambia la vida… Así empiezan estas novelas
+                        románticas que no sólo hablan de amor, sino de amistad, desarrollo y crecimiento personal. ¡No te pierdas las siguientes novelas románticas para adolescentes!
+                    </p>
+
+                    <div class="book-action">
+                        <button class="book-button">Ver Colleccion</button>
+                    </div>
+                </div>
+
+                <div class="book-image">
+                    <img class="" src="./images/books.png" />
+                </div>
+            </div>
+        </div>
+
+        <div class="pencil">
+            <div class="pencil-figure">
+                <img class="pencil-image" src="./images/pencil.png" />
+            </div>
+
+            <h1 class="pencil-title">Novelas de amor juvenil</h1>
+
+            <p class="pencil-desc">
+                <strong>Un amor de verano,</strong> intenso e inesperado; <em>una mudanza que conlleva</em> nuevos amigos, unos más interesantes que otros; una librería que te cambia la vida… Así empiezan estas
+                novelas <del>románticas que</del> no sólo X<sub>2</sub>, sino de amistad, 2<sup>10</sup> desarrollo y crecimiento personal. ¡No te pierdas las siguientes novelas románticas para adolescentes!
+            </p>
+
+            <div class="pencil-action">
+                <button class="pencil-button">Ver Colleccion</button>
+            </div>
+        </div>
+    </body>
+</html>

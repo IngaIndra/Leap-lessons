@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Star wars</title>
+    <style>
+      pre {
+        font-family: monospace;
+        font-size: 20px;
+        white-space: pre-wrap;
+      }
+    </style>
+  </head>
+  <body>
+    <pre id="output"></pre>
+
+    <script>
+      const n = 4;
+      let square = "";
+
+      for (let i = 1; i <= n; i++) {
+        for (let j = 1; j <= n; j++) {
+          square += "* ";
+        }
+        square += "\n"; // 1 mor yvaad daraagiin morluu unah
+      }
+
+      document.getElementById("output").textContent = square;
+    </script>
+  </body>
+</html>

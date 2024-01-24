@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo App</title>
+  </head>
+  <body>
+    <input type="text" id="input" />
+    <select id="selectBoard">
+      <option value="todo">To Do</option>
+      <option value="progress">In Progress</option>
+      <option value="done">Done</option>
+      <option value="stuck">Stuck</option>
+    </select>
+    <button id="button">Add</button>
+    <div style="display: flex; gap: 20px">
+      <ul id="todoList"></ul>
+      <ul id="progressList"></ul>
+      <ul id="doneList"></ul>
+      <ul id="stuckList"></ul>
+    </div>
+
+    <script>
+      const input = document.getElementById("input");
+      const button = document.getElementById("button");
+      const selectBoard = document.getElementById("selectBoard");
+
+      const boards = {
+        todo: document.getElementById("todoList"),
+        progress: document.getElementById("progressList"),
+        done: document.getElementById("doneList"),
+        stuck: document.getElementById("stuckList"),
+      };
+
+      const tasks = [
+        { text: "Task 1", status: "todo" },
+        { text: "Task 2", status: "progress" },
+        { text: "Task 3", status: "done" },
+        { text: "Task 4", status: "stuck" },
+      ];
+
+      function render() {
+        // Clear all boards
+        Object.values(boards).forEach((board) => (board.innerHTML = ""));
+
+        // Render tasks based on status
+        tasks.forEach((task) => {
+          const list = document.createElement("li");
+          list.innerText = task.text;
+
+          // Add a remove button to each list item
+          const removeButton = document.createElement("button");
+          removeButton.innerText = "Remove";
+          removeButton.onclick = function () {
+            removeTask(task);
+          };
+
+          list.appendChild(removeButton);
+          boards[task.status].appendChild(list);
+        });
+      }
+
+      function addTask() {
+        const item = input.value;
+        const selectedBoard = selectBoard.value;
+        if (item !== "") {
+          tasks.push({ text: item, status: selectedBoard });
+          input.value = "";
+          render();
+        }
+      }
+
+      function removeTask(task) {
+        const index = tasks.indexOf(task);
+        if (index !== -1) {
+          tasks.splice(index, 1);
+          render();
+        }
+      }
+
+      button.onclick = addTask;
+      render(); // Initial rendering
+    </script>
+  </body>
+</html>
+
+has context menu

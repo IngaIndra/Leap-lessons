@@ -1,0 +1,142 @@
+body {
+  margin: 0;
+}
+
+header {
+  height: 58px;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header img {
+  width: 50px;
+}
+
+main {
+  text-align: center;
+}
+
+.main-title {
+  font-size: 48px;
+  width: 250px;
+  text-align: center;
+  margin: 80px auto 38px;
+  font-family: Montserrat, sans-serif;
+  font-weight: 800;
+  margin-bottom: 40px;
+}
+
+.images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-top: 5vh;
+  padding: 0 80px;
+}
+
+.images img {
+  height: 400px;
+  width: 250px;
+  margin-bottom: 5vh;
+}
+
+@media (max-width: 1200px) {
+  .images {
+    justify-content: space-around;
+  }
+
+  .images img {
+    object-fit: cover;
+    object-position: top;
+    height: 250px;
+    width: 250px;
+    margin-bottom: 5vh;
+  }
+}
+
+@media (min-width: 580px) {
+  .main-title {
+    font-size: 64px;
+    width: 330px;
+    margin-bottom: 40px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .main-title {
+    font-size: 80px;
+    width: 410px;
+  }
+}
+
+.dest-header {
+  margin-top: 260px;
+  margin-left: 120px;
+  width: 360px;
+  text-align: left;
+}
+
+.dest-header p {
+  font-size: 32px;
+  font-family: Montserrat, sans-serif;
+  color: lime;
+  margin: 0;
+}
+
+.dest-header h1 {
+  margin: 0;
+  font-size: 48px;
+  font-family: Montserrat, sans-serif;
+}
+
+.dest-body {
+  list-style-type: none;
+  padding: 0;
+  position: relative;
+  margin: 120px;
+}
+
+.dest-body li {
+  border: 1px solid #000;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  width: 400px;
+  padding: 10px;
+  transition: all 1s, padding 0.7s;
+}
+
+.dest-body li:first-child .dest-img {
+  opacity: 1;
+}
+
+.dest-body li:hover {
+  background-color: #000;
+  color: #fff;
+  padding: 30px;
+}
+
+.dest-day {
+  font-family: Montserrat, sans-serif;
+  font-weight: bold;
+}
+
+.dest-location {
+  font-family: Montserrat, sans-serif;
+}
+
+.dest-img {
+  max-width: 590px;
+  max-height: 890px;
+  border-radius: 8px;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transition: opacity 1s;
+}
+
+.dest-body li:hover .dest-img {
+  opacity: 1;
+}

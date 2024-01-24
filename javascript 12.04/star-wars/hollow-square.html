@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hollow square</title>
+    <style>
+      pre {
+        font-family: monospace;
+        font-size: 20px;
+        white-space: pre-wrap;
+      }
+    </style>
+  </head>
+  <body>
+    <pre id="output"></pre>
+
+    <script>
+      const n = 4;
+      let square = "";
+
+      for (let i = 1; i <= n; i++) {
+        for (let j = 1; j <= n; j++) {
+          // zahiin tseguudiin bairlaliig indexeer ni shalgaj od tavina
+          if (i === 1 || i === n || j === 1 || j === n) {
+            square += "* ";
+          } else {
+            square += "  "; // herev zahiin tseg bish bol hooson zai avna
+          }
+        }
+        square += "\n"; // shine mor unagah
+      }
+
+      document.getElementById("output").textContent = square;
+    </script>
+  </body>
+</html>

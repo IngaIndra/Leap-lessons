@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //   adult or not
+      const age = 18;
+      if (age >= 18) {
+        console.log(age, ":You can drive");
+      } else {
+        console.log(age, ":You cannot drive");
+      }
+
+      //   80-s ih toonii niilber
+      const number1 = 50;
+      const number2 = 95;
+      const number3 = 75;
+      const number4 = 100;
+
+      let sum = 0;
+
+      if (number1 > 80) sum += number1;
+      if (number2 > 80) sum += number2;
+      if (number3 > 80) sum += number3;
+      if (number4 > 80) sum += number4;
+
+      console.log("Sum of numbers higher than 80:", sum);
+
+      //   check even or odd
+      const myNumber = 43;
+
+      if (myNumber % 2 === 0) {
+        console.log(`${myNumber} is an even number.`);
+      } else {
+        console.log(`${myNumber} is an odd number.`);
+      }
+
+      //   find largest number
+      const num1 = 42;
+      const num2 = 999;
+      const num3 = 89;
+
+      let largest;
+
+      if (num1 >= num2 && num1 >= num3) {
+        largest = num1;
+      } else if (num2 >= num1 && num2 >= num3) {
+        largest = num2;
+      } else {
+        largest = num3;
+      }
+
+      console.log(`The largest number is: ${largest}`);
+
+      //   find second largest number
+      const a = 3;
+      const b = 5;
+      const c = 9;
+      const d = 7;
+
+      let secondLargest;
+
+      if (a >= b && a >= c && a >= d) {
+        if (b >= c && b >= d) {
+          secondLargest = b;
+        } else if (c >= b && c >= d) {
+          secondLargest = c;
+        } else {
+          secondLargest = d;
+        }
+      } else if (b >= a && b >= c && b >= d) {
+        if (a >= c && a >= d) {
+          secondLargest = a;
+        } else if (c >= a && c >= d) {
+          secondLargest = c;
+        } else {
+          secondLargest = d;
+        }
+      } else if (c >= a && c >= b && c >= d) {
+        if (a >= b && a >= d) {
+          secondLargest = a;
+        } else if (b >= a && b >= d) {
+          secondLargest = b;
+        } else {
+          secondLargest = d;
+        }
+      } else {
+        if (a >= b && a >= c) {
+          secondLargest = a;
+        } else if (b >= a && b >= c) {
+          secondLargest = b;
+        } else {
+          secondLargest = c;
+        }
+      }
+
+      console.log("The second largest number is:", secondLargest);
+    </script>
+  </body>
+</html>

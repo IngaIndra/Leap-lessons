@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html
+  class="has-background-link-light"
+  xmlns:mso="urn:schemas-microsoft-com:office:office"
+  xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"
+>
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="columns">
+        <div class="column is-half is-offset-one-quarter">
+          <div
+            class="is-flex is-flex-direction-column is-justify-content-center"
+            style="height: 100vh"
+          >
+            <div class="box">
+              <div class="is-flex mb-4">
+                <input
+                  id="orolt"
+                  class="input is-large"
+                  type="text"
+                  placeholder="Input"
+                />
+                <button class="button is-primary is-large" onclick="findSum();">
+                  Бодох
+                </button>
+              </div>
+              <pre><code id="garalt" style="font-size: 20px;"></code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function findSum() {
+        const number = Number(document.getElementById("orolt").value);
+        let sum = 0;
+
+        for (let i = 1; i <= number; i++) {
+          if (i % 2 === 0) {
+            sum += i;
+          }
+        }
+        document.getElementById("garalt").innerText = sum;
+      }
+    </script>
+  </body>
+</html>

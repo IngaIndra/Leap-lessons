@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html
+  class="has-background-link-light"
+  xmlns:mso="urn:schemas-microsoft-com:office:office"
+  xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"
+>
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="columns">
+        <div class="column is-half is-offset-one-quarter">
+          <div
+            class="is-flex is-flex-direction-column is-justify-content-center"
+            style="height: 100vh"
+          >
+            <div class="box">
+              <div class="is-flex mb-4">
+                <input
+                  id="orolt"
+                  class="input is-large"
+                  type="text"
+                  placeholder="Input"
+                />
+                <button
+                  class="button is-primary is-large"
+                  onclick="doSomething();"
+                >
+                  Бодох
+                </button>
+              </div>
+              <pre><code id="garalt" style="font-size: 20px;"></code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function doSomething() {
+        const oroltElement = document.getElementById("orolt"); // Element-ee buhleer n avah
+        const oroltText = oroltElement.value; // Element-eesee utgaa avah
+        const oroltNumber = Number(oroltText); // Utgaa too ruu horvuuleh
+        let result = "";
+
+        const remainder = oroltNumber % 2;
+        if (remainder == 0) {
+          result = "even";
+        } else {
+          result = "odd";
+        }
+        // result = oroltText;
+
+        document.getElementById("garalt").innerText = result; //
+      }
+    </script>
+  </body>
+</html>

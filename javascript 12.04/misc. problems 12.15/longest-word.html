@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html
+  class="has-background-link-light"
+  xmlns:mso="urn:schemas-microsoft-com:office:office"
+  xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"
+>
+  <head>
+    <title>Longest First Word</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="columns">
+        <div class="column is-half is-offset-one-quarter">
+          <div
+            class="is-flex is-flex-direction-column is-justify-content-center"
+            style="height: 100vh"
+          >
+            <div class="box">
+              <div class="is-flex mb-4">
+                <input
+                  id="textInput"
+                  class="input is-large"
+                  type="text"
+                  placeholder="Input text"
+                />
+                <button
+                  class="button is-primary is-large"
+                  onclick="findLongestFirstWord();"
+                >
+                  Find
+                </button>
+              </div>
+              <pre><code id="output" style="font-size: 20px;"></code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function findLongestFirstWord() {
+        const inputText = document.getElementById("textInput").value;
+        const words = inputText.split(" ");
+
+        let longestFirstWord = "";
+        // ydaj neg ug bnuu ugu yu gedgiig shalgah
+        if (words.length > 0) {
+          longestFirstWord = words[0];
+          // ehnii ugiig hamgiin urt ug bolgoj hadgalah
+          for (let i = 1; i < words.length; i++) {
+            // davtalt yvah burt tuhain ug currentWord-ruu oroh
+            const currentWord = words[i];
+            // uldsen ugnude hamgiin ehnii ugtei haritsuulah
+            if (currentWord.length > longestFirstWord.length) {
+              longestFirstWord = currentWord;
+            }
+          }
+        }
+
+        document.getElementById("output").innerText = longestFirstWord;
+      }
+    </script>
+  </body>
+</html>

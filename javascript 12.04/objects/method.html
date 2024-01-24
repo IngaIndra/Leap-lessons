@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Birthday</title>
+  </head>
+  <body>
+    <script>
+      let person = {
+        firstName: "John",
+        lastName: "Doe",
+        age: 40,
+        gender: "Male",
+        address: {
+          street: "123 Main Street",
+          city: "Anytown",
+        },
+
+        happyBirthday: function (years) {
+          this.age += years;
+          console.log(this.age);
+
+          if (this.age >= 55) {
+            console.log("Wow, you're so old!");
+          }
+        },
+      };
+      // call the birthday function
+      person.happyBirthday(15);
+    </script>
+  </body>
+</html>

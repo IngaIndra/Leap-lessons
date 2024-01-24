@@ -1,0 +1,174 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+/* img {
+  width: 100%;
+} */
+
+@font-face {
+  font-family: NicoMoji;
+  src: url("./font/NicoMoji-Regular.ttf");
+}
+
+nav {
+  background: #101010;
+  text-align: center;
+}
+
+.lake-trip {
+  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.lake-trip h1 {
+  font-size: 5rem;
+  font-weight: 800;
+  text-align: center;
+  color: #303030;
+  margin-bottom: 40px;
+}
+
+.lake-trip-gallery {
+  display: flex;
+  gap: 66px;
+}
+
+.tours {
+  margin: 100px 0;
+  margin-left: 120px;
+  position: relative;
+}
+
+.tour-cards {
+  margin-top: 124px;
+}
+
+.card {
+  border: 1px solid #101010;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  text-align: right;
+  width: 400px;
+  padding: 20px;
+  border-radius: 8px;
+  transition: all 0.3s ease-in-out;
+}
+
+.card > p {
+  color: #303030;
+  font-weight: 700;
+}
+
+.location p:first-child {
+  margin-bottom: 10px;
+  color: #303030;
+  font-weight: 700;
+}
+
+.location p:last-child {
+  color: #777777;
+}
+
+.tours h3 {
+  font-family: NicoMoji;
+  color: #1ac74a;
+  font-size: 32px;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+.tours h2 {
+  font-size: 48px;
+  font-weight: 700;
+  color: #303030;
+}
+
+.card:hover {
+  background-color: #101010;
+}
+
+.card:hover p {
+  color: #d9d9d9;
+}
+
+#tour-img-1,
+#tour-img-2,
+#tour-img-3,
+#tour-img-4,
+#tour-img-5 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+  border-radius: 8px;
+}
+
+#card-1:hover #tour-img-1 {
+  opacity: 1;
+  visibility: visible;
+}
+
+#card-2:hover #tour-img-2 {
+  opacity: 1;
+  visibility: visible;
+}
+
+#card-3:hover #tour-img-3 {
+  opacity: 1;
+  visibility: visible;
+}
+
+#card-4:hover #tour-img-4 {
+  opacity: 1;
+  visibility: visible;
+}
+
+#card-5:hover #tour-img-5 {
+  opacity: 1;
+  visibility: visible;
+}
+
+@media screen and (max-width: 400px) {
+  .lake-trip-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+
+  .lake-trip-gallery img {
+    width: 148px;
+    height: 148px;
+  }
+
+  .tours {
+    margin-left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .card {
+    width: 312px;
+    padding: 10px;
+  }
+
+  .lake-trip h1 {
+    font-size: 48px;
+  }
+
+  .tours h2 {
+    font-size: 32px;
+  }
+}

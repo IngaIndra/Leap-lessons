@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pyramid</title>
+    <style>
+      pre {
+        font-family: monospace;
+        font-size: 30px;
+        white-space: pre-wrap;
+      }
+    </style>
+  </head>
+  <body>
+    <pre id="output"></pre>
+
+    <script>
+      const n = 4;
+      let pyramid = "";
+
+      // Outer loop: Loop through each row of the pyramid
+      for (let i = 0; i < n; i++) {
+        console.log(`i = ${i} (outer loop starts):`);
+
+        // Inner loop: Loop through each column in the current row
+        for (let j = 0; j < n - i - 1; j++) {
+          console.log(`  j = ${j} (inner loop starts): pyramid += ' ';`);
+
+          // Add a space to the pyramid string for leading spaces
+          pyramid += " ";
+
+          console.log(`  j = ${j}: pyramid += ' ';`);
+        }
+
+        // Inner loop: Loop through each column in the current row for asterisks
+        for (let k = 0; k <= i; k++) {
+          console.log(`  k = ${k} (inner loop starts): pyramid += '* ';`);
+
+          // Add an asterisk (*) to the pyramid string for each column
+          pyramid += "* ";
+
+          console.log(`  k = ${k}: pyramid += '* ';`);
+        }
+
+        // Add a newline character to move to the next row after each outer loop iteration
+        pyramid += "\n";
+
+        console.log(`  square += '\\n'; (move to the next line)`);
+        console.log(`i = ${i} (outer loop continues):`);
+      }
+
+      // Display the pyramid
+      document.getElementById("output").textContent = pyramid;
+    </script>
+  </body>
+</html>
